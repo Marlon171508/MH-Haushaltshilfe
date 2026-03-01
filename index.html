@@ -1,18 +1,181 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Geschichten</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div id="story-list" class="story-list"></div>
-    <div id="story-content" class="story-content hidden"></div>
-    <button id="back-btn" class="back-btn hidden">← Zurück</button>
-  </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufshilfe Hans – Weinsberg</title>
 
-  <script src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(to bottom, #f8f8f8, #eaeaea);
+            color: #111;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+        }
+
+        header img {
+            max-width: 320px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-weight: 500;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            margin: 40px 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.4s; }
+        .card:nth-child(4) { animation-delay: 0.6s; }
+        .card:nth-child(5) { animation-delay: 0.8s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .kontakt {
+            font-size: 22px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 14px;
+            background: #111;
+            color: white;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            header img { max-width: 240px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="Einkaufshilfe Hans Logo">
+    <h1>Kostenlose Einkaufshilfe für Menschen in Weinsberg</h1>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>Über das Angebot</h2>
+        <p>
+            Einkaufshilfe Hans bietet kostenlose Unterstützung für Menschen in Weinsberg, die Hilfe beim Einkaufen benötigen.
+            Ziel ist es, im Alltag zuverlässig zu helfen und Sicherheit zu geben.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Ablauf</h2>
+        <ul>
+            <li>Telefonische Kontaktaufnahme.</li>
+            <li>Besprechung der gewünschten Produkte.</li>
+            <li>Kleine Einkäufe werden übernommen und mit dem Fahrrad geliefert.</li>
+            <li>Bei größeren Einkäufen begleite ich Sie und unterstütze beim Finden und Bezahlen.</li>
+            <li>Sie erhalten immer den vollständigen Original-Kassenzettel.</li>
+            <li>Es wird ausschließlich der tatsächliche Einkaufsbetrag bezahlt.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Transparenz & Sicherheit</h2>
+        <ul>
+            <li>Die Hilfe ist vollständig kostenlos.</li>
+            <li>Keine versteckten Gebühren.</li>
+            <li>Keine Vorkasse ohne Absprache.</li>
+            <li>Nur vorher abgesprochene Produkte werden gekauft.</li>
+            <li>Original-Kassenzettel wird immer vorgezeigt.</li>
+            <li>Keine Weitergabe persönlicher Daten.</li>
+            <li>Keine Verpflichtung oder Vertragsbindung.</li>
+        </ul>
+        <p>
+            Ziel ist es, Vertrauen, Sicherheit und Transparenz zu gewährleisten.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Erreichbarkeit</h2>
+        <p>
+            Samstag & Sonntag: 9:00 – 21:00 Uhr<br>
+            Montag, Dienstag & Donnerstag: 16:20 – 20:00 Uhr<br>
+            Mittwoch & Freitag: 13:30 – 20:00 Uhr
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Kontakt</h2>
+        <p class="kontakt">
+            Telefon: <a href="tel:+4917651167208">0176 51167208</a><br>
+            E-Mail: <a href="mailto:marlon.hans@outlook.de">marlon.hans@outlook.de</a>
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Hinweis zur Haftung</h2>
+        <p>
+            Die Einkaufshilfe erfolgt freiwillig und unentgeltlich.
+            Eine Haftung wird nur bei vorsätzlichem oder grob fahrlässigem Verhalten übernommen.
+            Für gekaufte Waren gelten ausschließlich die Bedingungen des jeweiligen Geschäfts.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    <strong>Impressum</strong><br><br>
+    Marlon Hans<br>
+    Gärtnerstraße 1<br>
+    74189 Weinsberg<br>
+    E-Mail: marlon.hans@outlook.de
+</footer>
+
 </body>
 </html>
