@@ -6,87 +6,109 @@
 <title>Einkaufshilfe Hans – Weinsberg</title>
 
 <style>
-
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f4f4f4;
+    background: #f5f5f5;
     color: #111;
     line-height: 1.6;
 }
 
-/* Container */
-.wrapper {
-    max-width: 800px;
+.container {
+    max-width: 900px;
     margin: auto;
     padding: 20px;
 }
 
-/* Header */
 header {
     text-align: center;
-    padding: 40px 20px 20px 20px;
+    padding: 60px 20px 40px 20px;
+    background: white;
 }
 
 header img {
-    width: 140px;
+    width: 150px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 28px;
+    margin: 0 0 10px 0;
     font-weight: 600;
-    margin: 0;
 }
 
-/* Karten */
+.subtitle {
+    font-size: 18px;
+    color: #555;
+}
+
+.cta {
+    margin-top: 25px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta a:hover {
+    opacity: 0.85;
+}
+
 .card {
     background: white;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 35px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 h2 {
-    font-size: 18px;
     margin-top: 0;
+    font-size: 22px;
+}
+
+.steps {
+    display: grid;
+    gap: 15px;
+}
+
+.step {
+    padding: 15px;
+    border-left: 4px solid #111;
+    background: #fafafa;
 }
 
 ul {
-    padding-left: 18px;
-    margin: 10px 0;
+    padding-left: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-
-.kontakt a {
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* Footer */
 footer {
-    text-align: center;
-    font-size: 13px;
-    padding: 30px 20px;
-    margin-top: 40px;
     background: #111;
     color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    margin-top: 60px;
 }
 
-/* Mobile Optimierung */
-@media (min-width: 768px) {
-    h1 { font-size: 28px; }
-    h2 { font-size: 20px; }
-    .card { padding: 35px; }
+.small {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
 }
 
+@media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .card { padding: 25px; }
+}
 </style>
 </head>
 
@@ -94,25 +116,47 @@ footer {
 
 <header>
     <img src="logo.png" alt="Einkaufshilfe Hans Logo">
-    <h1>Kostenlose Einkaufshilfe in Weinsberg</h1>
+    <h1>Zuverlässige & kostenlose Einkaufshilfe in Weinsberg</h1>
+    <div class="subtitle">
+        Persönliche Unterstützung im Alltag – ehrlich, sicher und nah.
+    </div>
+
+    <div class="cta">
+        <a href="tel:+4917651167208">Jetzt anrufen: 0176 51167208</a>
+    </div>
 </header>
 
-<div class="wrapper">
+<div class="container">
 
 <div class="card">
 <h2>Über das Angebot</h2>
 <p>
-Einkaufshilfe Hans unterstützt Menschen in Weinsberg kostenlos beim Einkaufen.
-Kleine Besorgungen übernehme ich mit dem Fahrrad, bei größeren Einkäufen begleite ich Sie und helfe beim Finden und Bezahlen.
+Einkaufshilfe Hans ist ein privates, kostenloses Unterstützungsangebot in Weinsberg.
+Kleine Besorgungen übernehme ich mit dem Fahrrad. Bei größeren Einkäufen begleite ich Sie
+und unterstütze beim Finden der Produkte sowie beim Bezahlen.
 </p>
+<p class="small">
+Das Angebot ist ausschließlich in Weinsberg verfügbar.
+</p>
+</div>
+
+<div class="card">
+<h2>So läuft es ab</h2>
+<div class="steps">
+<div class="step">1. Telefonische Kontaktaufnahme und Besprechung der Einkaufsliste.</div>
+<div class="step">2. Kleine Einkäufe werden übernommen und geliefert.</div>
+<div class="step">3. Bei größeren Einkäufen begleite ich Sie persönlich.</div>
+<div class="step">4. Sie erhalten immer den vollständigen Original-Kassenzettel.</div>
+</div>
 </div>
 
 <div class="card">
 <h2>Sicherheit & Vertrauen</h2>
 <ul>
-<li>Keine Gebühren oder versteckte Kosten</li>
+<li>100% kostenlos – keine Gebühren</li>
+<li>Keine versteckten Kosten</li>
 <li>Original-Kassenzettel wird immer vorgezeigt</li>
-<li>Es werden nur abgesprochene Produkte gekauft</li>
+<li>Es werden ausschließlich abgesprochene Produkte gekauft</li>
 <li>Keine Vertragsbindung</li>
 <li>Keine Weitergabe persönlicher Daten</li>
 </ul>
@@ -121,30 +165,41 @@ Kleine Besorgungen übernehme ich mit dem Fahrrad, bei größeren Einkäufen beg
 <div class="card">
 <h2>Erreichbarkeit</h2>
 <p>
-Sa & So: 9:00 – 21:00 Uhr<br>
-Mo, Di & Do: 16:20 – 20:00 Uhr<br>
-Mi & Fr: 13:30 – 20:00 Uhr
+Samstag & Sonntag: 9:00 – 21:00 Uhr<br>
+Montag, Dienstag & Donnerstag: 16:20 – 20:00 Uhr<br>
+Mittwoch & Freitag: 13:30 – 20:00 Uhr
 </p>
 </div>
 
-<div class="card kontakt">
+<div class="card">
 <h2>Kontakt</h2>
-<a href="tel:+4917651167208">📞 0176 51167208</a>
-<a href="mailto:marlon.hans@outlook.de">✉ marlon.hans@outlook.de</a>
+<p>
+Telefon: <strong><a href="tel:+4917651167208">0176 51167208</a></strong><br>
+E-Mail: <a href="mailto:marlon.hans@outlook.de">marlon.hans@outlook.de</a>
+</p>
 </div>
 
 <div class="card">
-<h2>Hinweis</h2>
+<h2>Rechtliche Hinweise</h2>
 <p>
 Die Einkaufshilfe erfolgt freiwillig und unentgeltlich.
-Eine Haftung wird nur bei vorsätzlichem oder grob fahrlässigem Verhalten übernommen.
+Eine Haftung wird – außer bei vorsätzlichem oder grob fahrlässigem Verhalten –
+ausgeschlossen. Für gekaufte Waren gelten ausschließlich die Bedingungen des jeweiligen Geschäfts.
+</p>
+<p class="small">
+Datenschutz: Ihre Kontaktdaten werden ausschließlich zur Kommunikation im Rahmen
+der Einkaufshilfe verwendet und nicht an Dritte weitergegeben.
 </p>
 </div>
 
 </div>
 
 <footer>
-Marlon Hans · Gärtnerstraße 1 · 74189 Weinsberg
+<strong>Impressum</strong><br><br>
+Marlon Hans<br>
+Gärtnerstraße 1<br>
+74189 Weinsberg<br>
+E-Mail: marlon.hans@outlook.de
 </footer>
 
 </body>
