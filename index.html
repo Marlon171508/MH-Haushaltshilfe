@@ -27,7 +27,7 @@ header {
 }
 
 header img {
-    width: 150px;
+    width: 220px;   /* Logo größer */
     height: auto;
     margin-bottom: 20px;
 }
@@ -105,11 +105,15 @@ ul {
     font-weight: 600;
     display: block;
     margin: 8px 0;
-    transition: 0.3s;
 }
 
-.contact-box a:hover {
-    opacity: 0.8;
+.times-box {
+    background: #fafafa;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    line-height: 1.8;
 }
 
 footer {
@@ -125,6 +129,14 @@ footer {
     font-size: 14px;
     color: #666;
     margin-top: 10px;
+}
+
+.notice-box {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #444;
 }
 
 @media (max-width: 600px) {
@@ -186,11 +198,11 @@ Das Angebot ist ausschließlich in Weinsberg verfügbar.
 
 <div class="card">
 <h2>Erreichbarkeit</h2>
-<p>
+<div class="times-box">
 Samstag & Sonntag: 9:00 – 21:00 Uhr<br>
 Montag, Dienstag & Donnerstag: 16:20 – 20:00 Uhr<br>
 Mittwoch & Freitag: 13:30 – 20:00 Uhr
-</p>
+</div>
 </div>
 
 <div class="card">
@@ -208,6 +220,12 @@ Die Einkaufshilfe erfolgt freiwillig und unentgeltlich.
 Eine Haftung wird – außer bei vorsätzlichem oder grob fahrlässigem Verhalten –
 ausgeschlossen. Für gekaufte Waren gelten ausschließlich die Bedingungen des jeweiligen Geschäfts.
 </p>
+
+<div class="notice-box">
+Dieses Angebot ist ein privates, nicht gewerbliches Unterstützungsangebot aus Weinsberg
+und stellt keine gewerbliche Dienstleistung dar.
+</div>
+
 <p class="small">
 Datenschutz: Ihre Kontaktdaten werden ausschließlich zur Kommunikation im Rahmen
 der Einkaufshilfe verwendet und nicht an Dritte weitergegeben.
