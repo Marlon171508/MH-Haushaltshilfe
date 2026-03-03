@@ -5,242 +5,269 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Einkaufshilfe Hans – Weinsberg</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f5f5f5;
-    color: #111;
-    line-height: 1.6;
+:root{
+    --bg:#ffffff;
+    --text:#111;
+    --muted:#6e6e73;
+    --accent:#0071e3;
+    --glass:rgba(255,255,255,0.6);
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-    text-align: center;
-    padding: 60px 20px 40px 20px;
-    background: white;
+html{
+    scroll-behavior:smooth;
 }
 
-header img {
-    width: 220px;   /* Logo größer */
-    height: auto;
-    margin-bottom: 20px;
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.5;
+    overflow-x:hidden;
 }
 
-h1 {
-    font-size: 28px;
-    margin: 0 0 10px 0;
-    font-weight: 600;
+section{
+    padding:140px 20px;
+    text-align:center;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: #555;
+.container{
+    max-width:1000px;
+    margin:auto;
 }
 
-.cta {
-    margin-top: 25px;
+h1{
+    font-size:64px;
+    font-weight:600;
+    letter-spacing:-1px;
+    margin-bottom:20px;
 }
 
-.cta a {
-    display: inline-block;
-    padding: 14px 28px;
-    background: #111;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s ease;
+h2{
+    font-size:48px;
+    font-weight:600;
+    margin-bottom:20px;
 }
 
-.cta a:hover {
-    opacity: 0.85;
+p{
+    font-size:22px;
+    color:var(--muted);
+    max-width:700px;
+    margin:0 auto 20px auto;
 }
 
-.card {
-    background: white;
-    padding: 35px;
-    margin: 30px 0;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to bottom,#ffffff,#f5f5f7);
+    position:relative;
 }
 
-h2 {
-    margin-top: 0;
-    font-size: 22px;
+.logo{
+    width:200px;
+    margin-bottom:40px;
+    animation:fadeUp 1.5s ease forwards;
+    opacity:0;
 }
 
-.steps {
-    display: grid;
-    gap: 15px;
+.cta{
+    margin-top:40px;
 }
 
-.step {
-    padding: 15px;
-    border-left: 4px solid #111;
-    background: #fafafa;
+.cta a{
+    background:var(--accent);
+    color:white;
+    padding:16px 34px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:500;
+    text-decoration:none;
+    transition:all .3s ease;
+    box-shadow:0 10px 30px rgba(0,113,227,0.3);
 }
 
-ul {
-    padding-left: 20px;
+.cta a:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,113,227,0.4);
 }
 
-.contact-box {
-    background: #111;
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
+.glass{
+    background:var(--glass);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:60px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.08);
 }
 
-.contact-box a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    display: block;
-    margin: 8px 0;
+.grid{
+    display:grid;
+    gap:40px;
+    margin-top:60px;
 }
 
-.times-box {
-    background: #fafafa;
-    border: 1px solid #eee;
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: 500;
-    line-height: 1.8;
+.card{
+    padding:40px;
+    border-radius:30px;
+    background:#fafafa;
+    box-shadow:0 15px 40px rgba(0,0,0,0.05);
+    transition:all .4s ease;
 }
 
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 14px;
-    margin-top: 60px;
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,0.08);
 }
 
-.small {
-    font-size: 14px;
-    color: #666;
-    margin-top: 10px;
+.times{
+    font-size:24px;
+    line-height:1.8;
+    font-weight:500;
 }
 
-.notice-box {
-    background: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 14px;
-    color: #444;
+.contact{
+    background:#111;
+    color:white;
 }
 
-@media (max-width: 600px) {
-    h1 { font-size: 22px; }
-    .card { padding: 25px; }
+.contact a{
+    display:block;
+    margin:15px 0;
+    font-size:24px;
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+footer{
+    padding:60px 20px;
+    text-align:center;
+    color:#888;
+    font-size:14px;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.fade.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+    h1{font-size:42px;}
+    h2{font-size:32px;}
+    p{font-size:18px;}
+    section{padding:100px 20px;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <img src="logo.png" alt="Einkaufshilfe Hans Logo">
-    <h1>Zuverlässige & kostenlose Einkaufshilfe in Weinsberg</h1>
-    <div class="subtitle">
-        Persönliche Unterstützung im Alltag – ehrlich, sicher und nah.
-    </div>
-
+<section class="hero">
+    <img src="logo.png" class="logo" alt="Logo">
+    <h1>Zuverlässige Einkaufshilfe</h1>
+    <p>Kostenlos. Persönlich. Vertrauensvoll. In Weinsberg.</p>
     <div class="cta">
         <a href="tel:+4917651167208">Jetzt anrufen</a>
     </div>
-</header>
+</section>
 
-<div class="container">
+<section class="fade">
+    <div class="container glass">
+        <h2>Einfach menschlich.</h2>
+        <p>
+        Einkaufshilfe Hans ist ein privates Unterstützungsangebot in Weinsberg.
+        Kleine Besorgungen übernehme ich mit dem Fahrrad.
+        Bei größeren Einkäufen begleite ich Sie persönlich.
+        </p>
+    </div>
+</section>
 
-<div class="card">
-<h2>Über das Angebot</h2>
-<p>
-Einkaufshilfe Hans ist ein privates, kostenloses Unterstützungsangebot in Weinsberg.
-Kleine Besorgungen übernehme ich mit dem Fahrrad. Bei größeren Einkäufen begleite ich Sie
-und unterstütze beim Finden der Produkte sowie beim Bezahlen.
-</p>
-<p class="small">
-Das Angebot ist ausschließlich in Weinsberg verfügbar.
-</p>
-</div>
+<section class="fade">
+    <div class="container">
+        <h2>So funktioniert es</h2>
+        <div class="grid">
+            <div class="card">1. Telefonisch Kontakt aufnehmen</div>
+            <div class="card">2. Einkauf besprechen</div>
+            <div class="card">3. Lieferung oder Begleitung</div>
+            <div class="card">4. Original-Kassenzettel erhalten</div>
+        </div>
+    </div>
+</section>
 
-<div class="card">
-<h2>So läuft es ab</h2>
-<div class="steps">
-<div class="step">1. Telefonische Kontaktaufnahme und Besprechung der Einkaufsliste.</div>
-<div class="step">2. Kleine Besorgungen werden übernommen und geliefert.</div>
-<div class="step">3. Bei größeren Einkäufen begleite ich Sie persönlich und unterstütze vor Ort.</div>
-<div class="step">4. Sie erhalten immer den vollständigen Original-Kassenzettel.</div>
-</div>
-</div>
+<section class="fade">
+    <div class="container glass">
+        <h2>Vertrauen & Sicherheit</h2>
+        <p>
+        100% kostenlos. Keine Gebühren. Keine versteckten Kosten.
+        Keine Vertragsbindung. Keine Weitergabe persönlicher Daten.
+        </p>
+    </div>
+</section>
 
-<div class="card">
-<h2>Sicherheit & Vertrauen</h2>
-<ul>
-<li>100% kostenlos – keine Gebühren</li>
-<li>Keine versteckten Kosten</li>
-<li>Original-Kassenzettel wird immer vorgezeigt</li>
-<li>Nur vorher abgesprochene Produkte</li>
-<li>Keine Vertragsbindung</li>
-<li>Keine Weitergabe persönlicher Daten</li>
-</ul>
-</div>
+<section class="fade">
+    <div class="container">
+        <h2>Erreichbarkeit</h2>
+        <div class="times">
+            Samstag & Sonntag: 9:00 – 21:00 Uhr<br>
+            Montag, Dienstag & Donnerstag: 16:20 – 20:00 Uhr<br>
+            Mittwoch & Freitag: 13:30 – 20:00 Uhr
+        </div>
+    </div>
+</section>
 
-<div class="card">
-<h2>Erreichbarkeit</h2>
-<div class="times-box">
-Samstag & Sonntag: 9:00 – 21:00 Uhr<br>
-Montag, Dienstag & Donnerstag: 16:20 – 20:00 Uhr<br>
-Mittwoch & Freitag: 13:30 – 20:00 Uhr
-</div>
-</div>
-
-<div class="card">
-<h2>Kontakt</h2>
-<div class="contact-box">
-<a href="tel:+4917651167208">0176 51167208</a>
-<a href="mailto:marlon.hans@outlook.de">marlon.hans@outlook.de</a>
-</div>
-</div>
-
-<div class="card">
-<h2>Rechtliche Hinweise</h2>
-<p>
-Die Einkaufshilfe erfolgt freiwillig und unentgeltlich.
-Eine Haftung wird – außer bei vorsätzlichem oder grob fahrlässigem Verhalten –
-ausgeschlossen. Für gekaufte Waren gelten ausschließlich die Bedingungen des jeweiligen Geschäfts.
-</p>
-
-<div class="notice-box">
-Dieses Angebot ist ein privates, nicht gewerbliches Unterstützungsangebot aus Weinsberg
-und stellt keine gewerbliche Dienstleistung dar.
-</div>
-
-<p class="small">
-Datenschutz: Ihre Kontaktdaten werden ausschließlich zur Kommunikation im Rahmen
-der Einkaufshilfe verwendet und nicht an Dritte weitergegeben.
-</p>
-</div>
-
-</div>
+<section class="contact fade">
+    <div class="container">
+        <h2>Kontakt</h2>
+        <a href="tel:+4917651167208">0176 51167208</a>
+        <a href="mailto:marlon.hans@outlook.de">marlon.hans@outlook.de</a>
+    </div>
+</section>
 
 <footer>
-<strong>Impressum</strong><br><br>
+Impressum<br><br>
 Marlon Hans<br>
 Gärtnerstraße 1<br>
-74189 Weinsberg<br>
-E-Mail: marlon.hans@outlook.de
+74189 Weinsberg
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+        }
+    });
+});
+
+document.querySelectorAll(".fade").forEach(section=>{
+    observer.observe(section);
+});
+</script>
 
 </body>
 </html>
