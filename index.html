@@ -22,7 +22,7 @@ html{
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   background:#0e0e11;
-  color:#fff;
+  color:#ffffff;
   line-height:1.45;
   -webkit-font-smoothing:antialiased;
 }
@@ -35,7 +35,7 @@ body{
   padding:32px 20px 60px 20px;
 }
 
-/* Vertical rhythm system (consistent spacing) */
+/* Einheitlicher Abstand */
 .block{
   margin-top:28px;
 }
@@ -72,14 +72,40 @@ p{
 /* ================= HERO ================= */
 
 .hero{
-  padding-top:20px;
+  padding-top:10px;
 }
 
 .subtitle{
   font-size:17px;
   color:#9e9ea4;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
+
+/* ================= TRUST ================= */
+
+.trust{
+  display:flex;
+  justify-content:space-between;
+  margin:18px 0 22px 0;
+  text-align:center;
+}
+
+.trust-item{
+  flex:1;
+}
+
+.trust-number{
+  font-size:20px;
+  font-weight:600;
+}
+
+.trust-label{
+  font-size:12px;
+  color:#8a8a90;
+  margin-top:4px;
+}
+
+/* ================= BUTTON ================= */
 
 .cta{
   display:inline-block;
@@ -131,7 +157,7 @@ ul li:last-child{
   margin-top:10px;
   font-size:18px;
   text-decoration:none;
-  color:#fff;
+  color:#ffffff;
   font-weight:500;
 }
 
@@ -173,6 +199,23 @@ footer{
     <div class="subtitle">
       Kostenlos. Persönlich. Vertrauensvoll.
     </div>
+
+    <!-- TRUST STATS -->
+    <div class="trust">
+      <div class="trust-item">
+        <div class="trust-number">12+</div>
+        <div class="trust-label">unterstützte Haushalte</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">100%</div>
+        <div class="trust-label">positive Rückmeldungen</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">0€</div>
+        <div class="trust-label">Gebühren</div>
+      </div>
+    </div>
+
     <a href="tel:+4917651167208" class="cta">
       Jetzt anrufen
     </a>
@@ -201,7 +244,7 @@ footer{
         <li>1. Telefonische Kontaktaufnahme</li>
         <li>2. Einkauf gemeinsam besprechen</li>
         <li>3. Lieferung oder Begleitung</li>
-        <li>4. Original-Kassenzettel erhalten</li>
+        <li>4. Original-Kassenzettel wird übergeben</li>
       </ul>
     </div>
   </div>
@@ -211,7 +254,7 @@ footer{
     <div class="card">
       <h2>Sicherheit & Vertrauen</h2>
       <ul>
-        <li>100% kostenlos</li>
+        <li>100% kostenlos – keine Gebühren</li>
         <li>Keine versteckten Kosten</li>
         <li>Keine Vertragsbindung</li>
         <li>Keine Weitergabe persönlicher Daten</li>
@@ -224,9 +267,9 @@ footer{
     <div class="card">
       <h2>Erreichbarkeit</h2>
       <p>
-        Sa & So: 9–21 Uhr<br>
-        Mo, Di & Do: 16:20–20 Uhr<br>
-        Mi & Fr: 13:30–20 Uhr
+        Samstag & Sonntag: 9–21 Uhr<br>
+        Montag, Dienstag & Donnerstag: 16:20–20 Uhr<br>
+        Mittwoch & Freitag: 13:30–20 Uhr
       </p>
     </div>
   </div>
@@ -240,7 +283,9 @@ footer{
     </div>
   </div>
 
+  <!-- FOOTER -->
   <footer>
+    <strong>Impressum</strong><br><br>
     Marlon Hans<br>
     Gärtnerstraße 1<br>
     74189 Weinsberg
