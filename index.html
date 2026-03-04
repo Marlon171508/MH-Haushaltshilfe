@@ -277,12 +277,12 @@ footer{
       <a href="mailto:marlon.hans@outlook.de">marlon.hans@outlook.de</a>
     </div>
   </div>
-
 <footer>
 
   <div class="footer-summary" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
     <h3 style="color:white; font-size:18px; font-weight:600;">Impressum & Rechtliches</h3>
     <button 
+      id="footer-toggle-btn"
       onclick="toggleFooter()" 
       style="padding:12px 24px; background:#111; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.3s;">
       Mehr Lesen ▼
@@ -351,17 +351,11 @@ footer{
 <script>
 function toggleFooter() {
   const details = document.getElementById("footer-details");
-  const btn = document.querySelector("footer button");
+  // Nur den Footer-Content anzeigen/ausblenden
   if(details.style.display === "block"){
     details.style.display = "none";
-    btn.innerText = "Mehr Lesen ▼";
   } else {
     details.style.display = "block";
-    btn.innerText = "Weniger ▲";
-  }
-}
-</script>
-    btn.innerText = "Weniger ▲";
   }
 }
 </script>
