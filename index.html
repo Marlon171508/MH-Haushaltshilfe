@@ -280,16 +280,20 @@ footer{
 
 <footer>
 
-  <div class="footer-summary">
-    <h3>Impressum & Rechtliches</h3>
-    <button class="toggle-btn" onclick="toggleFooter()">Mehr Lesen ▼</button>
+  <div class="footer-summary" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+    <h3 style="color:white; font-size:18px; font-weight:600;">Impressum & Rechtliches</h3>
+    <button 
+      onclick="toggleFooter()" 
+      style="padding:12px 24px; background:#111; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.3s;">
+      Mehr Lesen ▼
+    </button>
   </div>
 
-  <div id="footer-details" class="footer-details" style="display:none;">
+  <div id="footer-details" style="display:none;">
 
-    <div class="legal-section">
-      <h4>Impressum</h4>
-      <p>
+    <div class="legal-section" style="margin-bottom:28px;">
+      <h4 style="color:white; font-size:14px; font-weight:600; margin-bottom:8px;">Impressum</h4>
+      <p style="color:#8a8a90; font-size:13px; line-height:1.6;">
         Angaben gemäß § 5 TMG<br><br>
         Verantwortlich: Christian Hans<br>
         Gärtnerstraße 1<br>
@@ -300,27 +304,27 @@ footer{
       </p>
     </div>
 
-    <div class="legal-section">
-      <h4>Hinweis zur Tätigkeit</h4>
-      <p>
+    <div class="legal-section" style="margin-bottom:28px;">
+      <h4 style="color:white; font-size:14px; font-weight:600; margin-bottom:8px;">Hinweis zur Tätigkeit</h4>
+      <p style="color:#8a8a90; font-size:13px; line-height:1.6;">
         Dieses Angebot wird von Marlon Hans (15 Jahre) als private Nachbarschaftshilfe
         erbracht. Es handelt sich nicht um eine gewerbliche Dienstleistung.
         Die Unterstützung erfolgt freiwillig und ohne vertragliche Bindung.
       </p>
     </div>
 
-    <div class="legal-section">
-      <h4>Haftungshinweis</h4>
-      <p>
+    <div class="legal-section" style="margin-bottom:28px;">
+      <h4 style="color:white; font-size:14px; font-weight:600; margin-bottom:8px;">Haftungshinweis</h4>
+      <p style="color:#8a8a90; font-size:13px; line-height:1.6;">
         Trotz sorgfältiger Durchführung wird keine Haftung für Schäden, 
         Lieferverzögerungen oder fehlerhafte Produkte übernommen. 
         Für gekaufte Waren haftet ausschließlich der jeweilige Händler.
       </p>
     </div>
 
-    <div class="legal-section">
-      <h4>Datenschutzerklärung</h4>
-      <p>
+    <div class="legal-section" style="margin-bottom:28px;">
+      <h4 style="color:white; font-size:14px; font-weight:600; margin-bottom:8px;">Datenschutzerklärung</h4>
+      <p style="color:#8a8a90; font-size:13px; line-height:1.6;">
         Beim Besuch dieser Webseite werden automatisch technische Daten
         (z. B. IP-Adresse, Browsertyp, Datum und Uhrzeit) durch GitHub verarbeitet.
         Diese Daten dienen ausschließlich der Bereitstellung der Webseite.
@@ -329,9 +333,9 @@ footer{
       </p>
     </div>
 
-    <div class="legal-section">
-      <h4>Hinweis zur Minderjährigkeit</h4>
-      <p>
+    <div class="legal-section" style="margin-bottom:28px;">
+      <h4 style="color:white; font-size:14px; font-weight:600; margin-bottom:8px;">Hinweis zur Minderjährigkeit</h4>
+      <p style="color:#8a8a90; font-size:13px; line-height:1.6;">
         Der Betreiber dieser Webseite ist minderjährig. Die Tätigkeit erfolgt im Rahmen 
         einer privaten Nachbarschaftshilfe mit Zustimmung der Erziehungsberechtigten.
       </p>
@@ -344,7 +348,7 @@ footer{
 <script>
 function toggleFooter() {
   const details = document.getElementById("footer-details");
-  const btn = document.querySelector(".toggle-btn");
+  const btn = document.querySelector("footer button");
   if(details.style.display === "block"){
     details.style.display = "none";
     btn.innerText = "Mehr Lesen ▼";
