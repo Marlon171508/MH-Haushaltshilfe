@@ -15,16 +15,12 @@
   box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  background:#0e0e11;
+  background:#0c0c0f;
   color:#ffffff;
-  line-height:1.45;
   -webkit-font-smoothing:antialiased;
+  line-height:1.4;
 }
 
 /* ================= LAYOUT ================= */
@@ -32,65 +28,61 @@ body{
 .wrapper{
   max-width:520px;
   margin:0 auto;
-  padding:32px 20px 60px 20px;
+  padding:28px 20px 60px 20px;
 }
 
-.block{
+.section{
   margin-top:28px;
 }
 
-.block:first-child{
+.section:first-child{
   margin-top:0;
 }
 
 /* ================= TYPO ================= */
 
 h1{
-  font-size:30px;
+  font-size:28px;
   font-weight:600;
-  letter-spacing:-0.4px;
-  margin-bottom:12px;
+  letter-spacing:-0.3px;
+  margin-bottom:8px;
 }
 
 h2{
-  font-size:22px;
+  font-size:20px;
   font-weight:600;
-  margin-bottom:14px;
-}
-
-p{
-  font-size:16px;
-  color:#b3b3b8;
-}
-
-.small{
-  font-size:14px;
-  color:#8a8a90;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-  padding-top:10px;
+  margin-bottom:12px;
 }
 
 .subtitle{
-  font-size:17px;
+  font-size:15px;
   color:#9e9ea4;
   margin-bottom:18px;
 }
 
-/* ================= TRUST ================= */
+p{
+  font-size:15px;
+  color:#b3b3b8;
+}
+
+.small{
+  font-size:13px;
+  color:#8a8a90;
+  margin-top:10px;
+}
+
+/* ================= TRUST CLEAN 2 GRID ================= */
 
 .trust{
-  display:flex;
-  justify-content:space-between;
-  margin:18px 0 12px 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
   text-align:center;
+  margin-bottom:16px;
 }
 
 .trust-item{
-  flex:1;
+  padding:6px 0;
 }
 
 .trust-number{
@@ -99,7 +91,7 @@ p{
 }
 
 .trust-label{
-  font-size:12px;
+  font-size:11px;
   color:#8a8a90;
   margin-top:4px;
 }
@@ -109,31 +101,26 @@ p{
 .cta{
   display:inline-block;
   margin-top:18px;
-  padding:14px 22px;
+  padding:13px 22px;
   background:#0a84ff;
   border-radius:100px;
   color:white;
   text-decoration:none;
-  font-size:15px;
+  font-size:14px;
   font-weight:500;
-  box-shadow:0 6px 25px rgba(10,132,255,0.4);
-  transition:.2s ease;
-}
-
-.cta:active{
-  transform:scale(.97);
+  box-shadow:0 6px 20px rgba(10,132,255,0.4);
 }
 
 /* ================= CARD ================= */
 
 .card{
-  background:#16161b;
+  background:#141419;
   border-radius:18px;
-  padding:20px;
+  padding:18px;
   box-shadow:0 8px 30px rgba(0,0,0,0.4);
 }
 
-/* ================= LIST ================= */
+/* ================= LIST CLEAN ================= */
 
 ul{
   list-style:none;
@@ -142,20 +129,21 @@ ul{
 ul li{
   font-size:15px;
   color:#b3b3b8;
-  padding:8px 0;
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  padding:6px 0;
 }
 
-ul li:last-child{
-  border-bottom:none;
+/* ================= TIMES ================= */
+
+.times li{
+  padding:5px 0;
 }
 
 /* ================= CONTACT ================= */
 
 .contact a{
   display:block;
-  margin-top:10px;
-  font-size:18px;
+  margin-top:8px;
+  font-size:16px;
   text-decoration:none;
   color:#ffffff;
   font-weight:500;
@@ -165,25 +153,10 @@ ul li:last-child{
 
 footer{
   margin-top:40px;
-  padding-top:24px;
+  padding-top:20px;
   border-top:1px solid rgba(255,255,255,0.05);
   font-size:13px;
   color:#8a8a90;
-}
-
-/* ================= DESKTOP ================= */
-
-@media(min-width:768px){
-
-  .wrapper{
-    max-width:720px;
-    padding:60px 40px;
-  }
-
-  h1{ font-size:46px; }
-  h2{ font-size:30px; }
-  p{ font-size:18px; }
-
 }
 
 </style>
@@ -194,13 +167,12 @@ footer{
 <div class="wrapper">
 
   <!-- HERO -->
-  <div class="hero block">
+  <div class="section">
     <h1>Zuverlässige Einkaufshilfe in Weinsberg</h1>
     <div class="subtitle">
       Kostenlos. Persönlich. Vertrauensvoll.
     </div>
 
-    <!-- TRUST STATS -->
     <div class="trust">
       <div class="trust-item">
         <div class="trust-number">–</div>
@@ -209,10 +181,6 @@ footer{
       <div class="trust-item">
         <div class="trust-number">–</div>
         <div class="trust-label">positive Rückmeldungen</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-number">0€</div>
-        <div class="trust-label">Gebühren</div>
       </div>
     </div>
 
@@ -226,7 +194,7 @@ footer{
   </div>
 
   <!-- ÜBER -->
-  <div class="block">
+  <div class="section">
     <div class="card">
       <h2>Einfach menschlich</h2>
       <p>
@@ -234,14 +202,14 @@ footer{
         Kleine Besorgungen übernehme ich mit dem Fahrrad.
         Bei größeren Einkäufen begleite ich Sie persönlich.
       </p>
-      <p class="small" style="margin-top:10px;">
+      <p class="small">
         Das Angebot ist ausschließlich in Weinsberg verfügbar.
       </p>
     </div>
   </div>
 
   <!-- ABLAUF -->
-  <div class="block">
+  <div class="section">
     <div class="card">
       <h2>So funktioniert es</h2>
       <ul>
@@ -254,11 +222,11 @@ footer{
   </div>
 
   <!-- SICHERHEIT -->
-  <div class="block">
+  <div class="section">
     <div class="card">
       <h2>Sicherheit & Vertrauen</h2>
       <ul>
-        <li>100% kostenlos – keine Gebühren</li>
+        <li>100% kostenlos</li>
         <li>Keine versteckten Kosten</li>
         <li>Keine Vertragsbindung</li>
         <li>Keine Weitergabe persönlicher Daten</li>
@@ -267,19 +235,19 @@ footer{
   </div>
 
   <!-- ZEITEN -->
-  <div class="block">
+  <div class="section">
     <div class="card">
       <h2>Erreichbarkeit</h2>
-      <p>
-        Samstag & Sonntag: 9–21 Uhr<br>
-        Montag, Dienstag & Donnerstag: 16:20–20 Uhr<br>
-        Mittwoch & Freitag: 13:30–20 Uhr
-      </p>
+      <ul class="times">
+        <li>Samstag & Sonntag: 9–21 Uhr</li>
+        <li>Montag, Dienstag & Donnerstag: 16:20–20 Uhr</li>
+        <li>Mittwoch & Freitag: 13:30–20 Uhr</li>
+      </ul>
     </div>
   </div>
 
   <!-- KONTAKT -->
-  <div class="block">
+  <div class="section">
     <div class="card contact">
       <h2>Kontakt</h2>
       <a href="tel:+4917651167208">0176 51167208</a>
@@ -287,7 +255,6 @@ footer{
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <strong>Impressum</strong><br><br>
     Marlon Hans<br>
