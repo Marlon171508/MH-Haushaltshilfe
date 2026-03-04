@@ -20,7 +20,7 @@ body{
   background:#0c0c0f;
   color:#ffffff;
   -webkit-font-smoothing:antialiased;
-  line-height:1.4;
+  line-height:1.45;
 }
 
 /* ================= LAYOUT ================= */
@@ -32,7 +32,7 @@ body{
 }
 
 .section{
-  margin-top:28px;
+  margin-top:30px;
 }
 
 .section:first-child{
@@ -51,13 +51,13 @@ h1{
 h2{
   font-size:20px;
   font-weight:600;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 .subtitle{
   font-size:15px;
   color:#9e9ea4;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
 p{
@@ -71,14 +71,13 @@ p{
   margin-top:10px;
 }
 
-/* ================= TRUST CLEAN 2 GRID ================= */
+/* ================= TRUST ================= */
 
 .trust{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:0;
   text-align:center;
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
 
 .trust-item{
@@ -101,14 +100,14 @@ p{
 .cta{
   display:inline-block;
   margin-top:18px;
-  padding:13px 22px;
+  padding:14px 22px;
   background:#0a84ff;
   border-radius:100px;
   color:white;
   text-decoration:none;
   font-size:14px;
   font-weight:500;
-  box-shadow:0 6px 20px rgba(10,132,255,0.4);
+  box-shadow:0 6px 20px rgba(10,132,255,0.35);
 }
 
 /* ================= CARD ================= */
@@ -116,11 +115,11 @@ p{
 .card{
   background:#141419;
   border-radius:18px;
-  padding:18px;
+  padding:20px;
   box-shadow:0 8px 30px rgba(0,0,0,0.4);
 }
 
-/* ================= LIST CLEAN ================= */
+/* ================= LIST ================= */
 
 ul{
   list-style:none;
@@ -132,10 +131,27 @@ ul li{
   padding:6px 0;
 }
 
-/* ================= TIMES ================= */
+/* ================= ZEITEN CLEAN ================= */
 
-.times li{
-  padding:5px 0;
+.times-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  row-gap:12px;
+  column-gap:16px;
+  align-items:center;
+}
+
+.day{
+  font-size:14px;
+  color:#b3b3b8;
+}
+
+.time{
+  font-size:14px;
+  color:#ffffff;
+  font-weight:500;
+  text-align:right;
+  white-space:nowrap;
 }
 
 /* ================= CONTACT ================= */
@@ -152,7 +168,7 @@ ul li{
 /* ================= FOOTER ================= */
 
 footer{
-  margin-top:40px;
+  margin-top:42px;
   padding-top:20px;
   border-top:1px solid rgba(255,255,255,0.05);
   font-size:13px;
@@ -238,11 +254,18 @@ footer{
   <div class="section">
     <div class="card">
       <h2>Erreichbarkeit</h2>
-      <ul class="times">
-        <li>Samstag & Sonntag: 9–21 Uhr</li>
-        <li>Montag, Dienstag & Donnerstag: 16:20–20 Uhr</li>
-        <li>Mittwoch & Freitag: 13:30–20 Uhr</li>
-      </ul>
+
+      <div class="times-grid">
+        <div class="day">Samstag & Sonntag</div>
+        <div class="time">09:00 – 21:00</div>
+
+        <div class="day">Montag, Dienstag & Donnerstag</div>
+        <div class="time">16:20 – 20:00</div>
+
+        <div class="day">Mittwoch & Freitag</div>
+        <div class="time">13:30 – 20:00</div>
+      </div>
+
     </div>
   </div>
 
